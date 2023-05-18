@@ -10,7 +10,7 @@
 * Copyright 2023 Creative Tim (https://www.creative-tim.com)
 * Licensed under MIT (https://www.creative-tim.com/license)
 * Coded by Creative Tim
-
+tables
 =========================================================
 
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
@@ -126,13 +126,13 @@
 
   
 <li class="nav-item">
-  <a class="nav-link text-white " href="./tables.php">
+  <a class="nav-link text-white " href="./pages/tables.php">
     
       <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
         <i class="material-icons opacity-10">table_view</i>
       </div>
     
-    <span class="nav-link-text ms-1">Tables</span>
+    <span class="nav-link-text ms-1">Users</span>
   </a>
 </li>
 
@@ -446,7 +446,7 @@
     <div class="text-end pt-1">
       <p class="text-sm mb-0 text-capitalize ">Revenue</p>
       <h4 class="mb-0 ">34k</h4>
-    </div>
+    </div>tables
   </div>
 
   <hr class="horizontal my-0 dark">
