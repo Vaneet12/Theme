@@ -1,4 +1,17 @@
 
+<?php
+session_start();
+echo "Welcome " . $_SESSION['user_name'];
+include("connection4.php");
+$userprofile=$_SESSION['user_name'];
+if($userprofile==true){
+
+}
+else{
+    header('location:https://www.psd2htmlx.com/w/dashboard/pages/sign-in.php');
+
+}
+?>
 
 
 <!--
