@@ -151,7 +151,7 @@ tables
 
   
 <li class="nav-item">
-  <a class="nav-link text-white " href="https://www.psd2htmlx.com/w/dashboard/billing.html">
+  <a class="nav-link text-white " href="https://www.psd2htmlx.com/w/dashboard/billing.php">
     
       <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
         <i class="material-icons opacity-10">receipt_long</i>
@@ -163,7 +163,7 @@ tables
 
   
 <li class="nav-item">
-  <a class="nav-link text-white " href="https://www.psd2htmlx.com/w/dashboard/virtual-reality.html">
+  <a class="nav-link text-white " href="https://www.psd2htmlx.com/w/dashboard/virtual-reality.php">
     
       <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
         <i class="material-icons opacity-10">view_in_ar</i>
@@ -175,7 +175,7 @@ tables
 
   
 <li class="nav-item">
-  <a class="nav-link text-white " href="https://www.psd2htmlx.com/w/dashboard/rtl.html">
+  <a class="nav-link text-white " href="https://www.psd2htmlx.com/w/dashboard/rtl.php">
     
       <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
         <i class="material-icons opacity-10">format_textdirection_r_to_l</i>
@@ -187,7 +187,7 @@ tables
 
   
 <li class="nav-item">
-  <a class="nav-link text-white " href="https://www.psd2htmlx.com/w/dashboard/notifications.html">
+  <a class="nav-link text-white " href="https://www.psd2htmlx.com/w/dashboard/notifications.php">
     
       <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
         <i class="material-icons opacity-10">notifications</i>
@@ -203,7 +203,7 @@ tables
     </li>
   
 <li class="nav-item">
-  <a class="nav-link text-white " href="https://www.psd2htmlx.com/w/dashboard/profile.html">
+  <a class="nav-link text-white " href="https://www.psd2htmlx.com/w/dashboard/profile.php">
     
       <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
         <i class="material-icons opacity-10">person</i>
