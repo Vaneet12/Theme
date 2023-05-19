@@ -1,3 +1,17 @@
+<?php
+session_start();
+echo "Welcome " . $_SESSION['user_name'];
+include("connection4.php");
+$userprofile=$_SESSION['user_name'];
+if($userprofile==true){
+
+}
+else{
+    header('location:https://www.psd2htmlx.com/w/dashboard/pages/sign-in.php');
+
+}
+?>
+
 <!--
 =========================================================
 * Material Dashboard 2 - v3.1.0
@@ -193,7 +207,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white " href="https://www.psd2htmlx.com/w/dashboard/pages/billing.html">
+            <a class="nav-link text-white " href="https://www.psd2htmlx.com/w/dashboard/pages/billing.php">
               <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                 <i class="material-icons opacity-10">receipt_long</i>
               </div>
@@ -201,7 +215,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white active bg-gradient-primary" href="https://www.psd2htmlx.com/w/dashboard/pages/virtual-reality.html">
+            <a class="nav-link text-white active bg-gradient-primary" href="https://www.psd2htmlx.com/w/dashboard/pages/virtual-reality.php">
               <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                 <i class="material-icons opacity-10">view_in_ar</i>
               </div>
@@ -209,7 +223,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white " href="https://www.psd2htmlx.com/w/dashboard/pages/rtl.html">
+            <a class="nav-link text-white " href="https://www.psd2htmlx.com/w/dashboard/pages/rtl.php">
               <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                 <i class="material-icons opacity-10">format_textdirection_r_to_l</i>
               </div>
@@ -217,7 +231,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white " href="https://www.psd2htmlx.com/w/dashboard/pages/notifications.html">
+            <a class="nav-link text-white " href="https://www.psd2htmlx.com/w/dashboard/pages/notifications.php">
               <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                 <i class="material-icons opacity-10">notifications</i>
               </div>
@@ -228,7 +242,7 @@
             <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Account pages</h6>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white " href="https://www.psd2htmlx.com/w/dashboard/pages/profile.html">
+            <a class="nav-link text-white " href="https://www.psd2htmlx.com/w/dashboard/pages/profile.php">
               <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                 <i class="material-icons opacity-10">person</i>
               </div>
