@@ -114,7 +114,7 @@ tables
           
   
 <li class="nav-item">
-  <a class="nav-link text-white " href="./pages/dashboard.php">
+  <a class="nav-link text-white " href="https://www.psd2htmlx.com/w/dashboard/pages/dashboard.php">
     
       <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
         <i class="material-icons opacity-10">dashboard</i>
@@ -126,7 +126,7 @@ tables
 
   
 <li class="nav-item">
-  <a class="nav-link text-white " href="./pages/tables.php">
+  <a class="nav-link text-white " href="https://www.psd2htmlx.com/w/dashboard/pages/tables.php">
     
       <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
         <i class="material-icons opacity-10">table_view</i>
@@ -138,7 +138,7 @@ tables
 
   
 <li class="nav-item">
-  <a class="nav-link text-white " href="./billing.html">
+  <a class="nav-link text-white " href="https://www.psd2htmlx.com/w/dashboard/billing.html">
     
       <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
         <i class="material-icons opacity-10">receipt_long</i>
@@ -150,7 +150,7 @@ tables
 
   
 <li class="nav-item">
-  <a class="nav-link text-white " href="./virtual-reality.html">
+  <a class="nav-link text-white " href="https://www.psd2htmlx.com/w/dashboard/virtual-reality.html">
     
       <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
         <i class="material-icons opacity-10">view_in_ar</i>
@@ -162,7 +162,7 @@ tables
 
   
 <li class="nav-item">
-  <a class="nav-link text-white " href="./rtl.html">
+  <a class="nav-link text-white " href="https://www.psd2htmlx.com/w/dashboard/rtl.html">
     
       <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
         <i class="material-icons opacity-10">format_textdirection_r_to_l</i>
@@ -174,7 +174,7 @@ tables
 
   
 <li class="nav-item">
-  <a class="nav-link text-white " href="./notifications.html">
+  <a class="nav-link text-white " href="https://www.psd2htmlx.com/w/dashboard/notifications.html">
     
       <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
         <i class="material-icons opacity-10">notifications</i>
@@ -190,7 +190,7 @@ tables
     </li>
   
 <li class="nav-item">
-  <a class="nav-link text-white " href="./profile.html">
+  <a class="nav-link text-white " href="https://www.psd2htmlx.com/w/dashboard/profile.html">
     
       <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
         <i class="material-icons opacity-10">person</i>
@@ -202,7 +202,7 @@ tables
 
   
 <li class="nav-item">
-  <a class="nav-link text-white " href="./pages/sign-in.php">
+  <a class="nav-link text-white " href="https://www.psd2htmlx.com/w/dashboard/pages/sign-in.php">
     
       <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
         <i class="material-icons opacity-10">login</i>
@@ -214,7 +214,7 @@ tables
 
   
 <li class="nav-item">
-  <a class="nav-link text-white " href="./pages/sign-up.php">
+  <a class="nav-link text-white " href="https://www.psd2htmlx.com/w/dashboard/pages/sign-up.php">
     
       <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
         <i class="material-icons opacity-10">assignment</i>
@@ -350,7 +350,7 @@ tables
           </ul>
         </li>
         <li class="nav-item d-flex align-items-center">
-          <a href="./pages/sign-in.php" class="nav-link text-body font-weight-bold px-0">
+          <a href="https://www.psd2htmlx.com/w/dashboard/pages/sign-in.php" class="nav-link text-body font-weight-bold px-0">
             <i class="fa fa-user me-sm-1"></i>
             
             <span class="d-sm-inline d-none">Sign In</span>
