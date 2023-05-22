@@ -4,6 +4,6 @@ session_start();
 
 session_unset();
 
-header('location:http://localhost/pages/sign-in.php');
+header('location:psd2htmlx.com/w/dashboard/pages/sign-in.php');
 
 ?>
