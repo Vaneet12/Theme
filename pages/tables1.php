@@ -7,7 +7,7 @@ if($userprofile==true){
 
 }
 else{
-    header('location:https://localhost/pages/sign-in.php');
+    header('location:https://www.psd2htmlx.com/w/dashboard/pages/sign-in.php');
 
 }
 ?>
@@ -83,7 +83,7 @@ else{
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="../pages/tables.php">
+          <a class="nav-link text-white" href="https://www.psd2htmlx.com/w/dashboard/pages/tables.php">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">table_view</i>
             </div>
@@ -91,7 +91,7 @@ else{
           </a>
         </li>
         <li class="nav-item">
-  <a class="nav-link text-white active bg-gradient-primary" href="../pages/tables1.php">
+  <a class="nav-link text-white active bg-gradient-primary" href="https://www.psd2htmlx.com/w/dashboard/pages/tables1.php">
     
       <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
         <i class="material-icons opacity-10">shopping_cart_checkout</i>
@@ -102,7 +102,7 @@ else{
 </li>
 
         <li class="nav-item">
-          <a class="nav-link text-white " href="../pages/billing.html">
+          <a class="nav-link text-white " href="https://www.psd2htmlx.com/w/dashboard/pages/billing.php">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">receipt_long</i>
             </div>
@@ -110,7 +110,7 @@ else{
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="../pages/virtual-reality.html">
+          <a class="nav-link text-white " href="https://www.psd2htmlx.com/w/dashboard/pages/virtual-reality.php">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">view_in_ar</i>
             </div>
@@ -118,7 +118,7 @@ else{
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="../pages/rtl.html">
+          <a class="nav-link text-white " href="https://www.psd2htmlx.com/w/dashboard/pages/rtl.php">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">format_textdirection_r_to_l</i>
             </div>
@@ -126,7 +126,7 @@ else{
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="../pages/notifications.html">
+          <a class="nav-link text-white " href="https://www.psd2htmlx.com/w/dashboard/pages/notifications.php">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">notifications</i>
             </div>
@@ -137,7 +137,7 @@ else{
           <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Account pages</h6>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="../pages/profile.html">
+          <a class="nav-link text-white " href="https://www.psd2htmlx.com/w/dashboard/pages/profile.php">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">person</i>
             </div>
@@ -145,7 +145,7 @@ else{
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="../pages/sign-in.html">
+          <a class="nav-link text-white " href="https://www.psd2htmlx.com/w/dashboard/pages/sign-in.php">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">login</i>
             </div>
@@ -153,7 +153,7 @@ else{
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="../pages/sign-up.html">
+          <a class="nav-link text-white " href="https://www.psd2htmlx.com/w/dashboard/pages/sign-up.php">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">assignment</i>
             </div>
