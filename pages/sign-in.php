@@ -43,7 +43,7 @@ session_start();
   <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
   <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
 </head>
-https://github.com/Vaneet12/Theme.git
+
 <body class="bg-gray-200">
   <div class="container position-sticky z-index-sticky top-0">
     <div class="row">
@@ -80,7 +80,7 @@ https://github.com/Vaneet12/Theme.git
                       </a>
                     </div>
                   </div>
-                </div>https://github.com/Vaneet12/Theme.git
+                </div>
               </div>
               <div class="card-body">
                 <form role="form" class="text-start" action="" method="post">
@@ -116,7 +116,7 @@ https://github.com/Vaneet12/Theme.git
               <div class="copyright text-center text-sm text-white text-lg-start">
                 © <script>
                   document.write(new Date().getFullYear())
-                </script>,https://github.com/Vaneet12/Theme.git
+                </script>
                 made with <i class="fa fa-heart" aria-hidden="true"></i> by
                 <a href="https://www.creative-tim.com" class="font-weight-bold text-white" target="_blank">Creative Tim</a>
                 for a better web.
