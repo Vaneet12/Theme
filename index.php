@@ -69,7 +69,7 @@ tables
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
 
 <!-- Nucleo Icons -->
-<link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+<link href="./assets/css/nucleo-icons.css" rel="stylesheet" />10,618
 <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
 
 <!-- Font Awesome Icons -->
@@ -295,6 +295,10 @@ tables
             </div>
           </a>
         </li>
+          <li class="nav-item px-3 d-flex align-items-center">
+            <a  href="logout2.php" ><input type="submit"  class="btn btn-outline-primary btn-sm mb-0 " value="Logout">
+</a>
+</li>
         <li class="nav-item px-3 d-flex align-items-center">
           <a href="javascript:;" class="nav-link text-body p-0">
             <i class="fa fa-cog fixed-plugin-button-nav cursor-pointer"></i>
