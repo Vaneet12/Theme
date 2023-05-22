@@ -1,3 +1,8 @@
+<?php
+ob_start();
+session_start();
+?>
+
 <!--
 =========================================================
 * Material Dashboard 2 - v3.1.0
@@ -25,7 +30,7 @@
   </title>
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
-  <!-- Nucleo Icons -->
+  <!-- Nu•••••••••cleo Icons -->
   <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
   <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
   <!-- Font Awesome Icons -->
@@ -38,7 +43,7 @@
   <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
   <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
 </head>
-
+https://github.com/Vaneet12/Theme.git
 <body class="bg-gray-200">
   <div class="container position-sticky z-index-sticky top-0">
     <div class="row">
@@ -69,15 +74,15 @@
                     <i class="fa fa-user opacity-6 text-dark me-1"></i>
                     Profile
                   </a>
-                </li>
+                </li>•••••••••
                 <li class="nav-item">
-                  <a class="nav-link me-2" href="../pages/sign-up.html">
+                  <a class="nav-link me-2" href="../pages/sign-up.php">
                     <i class="fas fa-user-circle opacity-6 text-dark me-1"></i>
                     Sign Up
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link me-2" href="../pages/sign-in.html">
+                  <a class="nav-link me-2" href="../pages/sign-in.php">
                     <i class="fas fa-key opacity-6 text-dark me-1"></i>
                     Sign In
                   </a>
@@ -125,28 +130,28 @@
                       </a>
                     </div>
                   </div>
-                </div>
+                </div>https://github.com/Vaneet12/Theme.git
               </div>
               <div class="card-body">
-                <form role="form" class="text-start">
+                <form role="form" class="text-start" action="" method="post">
                   <div class="input-group input-group-outline my-3">
                     <label class="form-label">Email</label>
-                    <input type="email" class="form-control">
+                    <input type="email" name="username" class="form-control">
                   </div>
                   <div class="input-group input-group-outline mb-3">
                     <label class="form-label">Password</label>
-                    <input type="password" class="form-control">
+                    <input type="password" name="password" class="form-control">
                   </div>
                   <div class="form-check form-switch d-flex align-items-center mb-3">
                     <input class="form-check-input" type="checkbox" id="rememberMe" checked>
                     <label class="form-check-label mb-0 ms-3" for="rememberMe">Remember me</label>
                   </div>
                   <div class="text-center">
-                    <button type="button" class="btn bg-gradient-primary w-100 my-4 mb-2">Sign in</button>
+                    <input type="submit" name="submit" class="btn bg-gradient-primary w-100 my-4 mb-2" value="Sign in">
                   </div>
                   <p class="mt-4 text-sm text-center">
                     Don't have an account?
-                    <a href="../pages/sign-up.html" class="text-primary text-gradient font-weight-bold">Sign up</a>
+                    <a href="../pages/sign-up.php" class="text-primary text-gradient font-weight-bold">Sign up</a>
                   </p>
                 </form>
               </div>
@@ -161,7 +166,7 @@
               <div class="copyright text-center text-sm text-white text-lg-start">
                 © <script>
                   document.write(new Date().getFullYear())
-                </script>,
+                </script>,https://github.com/Vaneet12/Theme.git
                 made with <i class="fa fa-heart" aria-hidden="true"></i> by
                 <a href="https://www.creative-tim.com" class="font-weight-bold text-white" target="_blank">Creative Tim</a>
                 for a better web.
@@ -186,7 +191,7 @@
           </div>
         </div>
       </footer>
-    </div>
+    </div>•••••••••
   </main>
   <!--   Core JS Files   -->
   <script src="../assets/js/core/popper.min.js"></script>
@@ -209,3 +214,26 @@
 </body>
 
 </html>
+<?php
+include("connection4.php");
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+if(isset($_POST['submit'])){
+    $username=$_POST['username'];
+    $password=$_POST['password'];
+    $query="SELECT * FROM `form` WHERE email='$username' && password='$password'";
+    $data=mysqli_query($con,$query);
+$total=mysqli_num_rows($data);
+echo $total;
+if($total){
+    $_SESSION['user_name']=$username;
+echo "success";
+header("location:https://www.psd2htmlx.com/w/dashboard/index.php");
+}
+else{
+    echo "<script>alert('Incorrect details')</script>";                           
+}
+}
+?>
