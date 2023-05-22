@@ -316,7 +316,7 @@ echo $total;
 
 if($total !=0){
     ?>
-<h2 align="center"><mark>Displaying All Records</mark></h2>
+<h2 align="center"><mark>User details</mark></h2>
 <center><table border="0" cellspacing="7" width="100%" class="table" id="table-container">
     <tr>
     <th width="15%">ID</th>
