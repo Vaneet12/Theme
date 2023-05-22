@@ -95,6 +95,10 @@ $result=mysqli_fetch_assoc($data);
                     <div class="input-group input-group-outline mb-3">
                       <label class="form-label">Password : <?php echo $result['password']; ?></label>
                     </div>
+                      <li class="nav-item px-3 d-flex align-items-center">
+            <a  href="logout2.php" ><input type="submit"  class="btn btn-outline-primary btn-sm mb-0 " value="Logout">
+</a>
+</li>
                     </form>
                 </div>
 </div>
