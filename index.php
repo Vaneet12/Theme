@@ -148,7 +148,16 @@ tables
     <span class="nav-link-text ms-1">Users</span>
   </a>
 </li>
-
+<li class="nav-item">
+  <a class="nav-link text-white" href="href="https://www.psd2htmlx.com/w/dashboard/pages/tables1.php">
+    
+      <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+        <i class="material-icons opacity-10">shopping_cart_checkout</i>
+      </div>
+    
+    <span class="nav-link-text ms-1">Products</span>
+  </a>
+</li>
   
 <li class="nav-item">
   <a class="nav-link text-white " href="https://www.psd2htmlx.com/w/dashboard/billing.php">
