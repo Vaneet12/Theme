@@ -46,6 +46,8 @@ error_reporting(E_ALL);
   <!-- Nepcha Analytics (nepcha.com) -->•••••••••
   <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
   <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
+    <script src="vali2.js"></script> 
+
 </head>
 
 <body class="">
@@ -86,6 +88,12 @@ error_reporting(E_ALL);
                       <label class="form-label">Password</label>
                       <input type="password" class="form-control" name="password">
                     </div>
+                     <div class="input-group input-group-outline mb-3">
+                      <label class="form-label">Confirm-Password</label>
+                      <input type="password" class="form-control" id="confirm_pass" name="cpassword" onchange="validate_password()">
+                    </div>
+                    <span id="wrong_pass_alert"></span>
+
                     <div class="form-check form-check-info text-start ps-0">
                       <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
                       <label class="form-check-label" for="flexCheckDefault">
@@ -139,7 +147,10 @@ if(isset($_POST['submit'])){
     $name=$_POST['name'];
     $email=$_POST['email'];
     $password=$_POST['password'];
-    $result = mysqli_query($con,"SELECT * FROM `form` WHERE email = '$email'") or exit(mysqli_error()); //check for duplicates
+  $password1= password_hash($password, PASSWORD_DEFAULT);
+   $password2= password_hash($cpassword, PASSWORD_DEFAULT);
+
+    $result = mysqli_query($con,"SELECT * FROM `form` WHERE email = '$email'") or exit(mysqli_error());
     $num_rows = mysqli_num_rows($result); 
     
      if(($num_rows) > 0){
@@ -150,7 +161,7 @@ if(isset($_POST['submit'])){
 
 //if($fname !="" && $lname !="" && $password !="" && $conf !="" && $gender !="" && $email !="" && $phone !="" && $caste !="" && lang1 !="" && $address !=""){
 else{
-  $query ="INSERT INTO `form`(name,email,password) VALUES ('$name','$email','$password')";
+  $query ="INSERT INTO `form`(name,email,password,cpassword) VALUES ('$name','$email','$password1','$password2')";
   $data=mysqli_query($con,$query);
   if($data){
     echo "<script>alert('You have been registered')</script>";
