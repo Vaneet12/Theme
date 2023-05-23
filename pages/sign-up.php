@@ -153,10 +153,10 @@ else{
   $query ="INSERT INTO `form`(name,email,password) VALUES ('$name','$email','$password')";
   $data=mysqli_query($con,$query);
   if($data){
-    echo "data inserted";
+    echo "<script>alert('You have been registered')</script>";
   }
   else{
-    echo "not inserted";
+    echo "<script>alert('You have not been registered')</script>";
   }
 }
 }
