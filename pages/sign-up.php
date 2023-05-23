@@ -147,6 +147,8 @@ if(isset($_POST['submit'])){
     $name=$_POST['name'];
     $email=$_POST['email'];
     $password=$_POST['password'];
+      $cpassword=$_POST['cpassword'];
+
   $password1= password_hash($password, PASSWORD_DEFAULT);
    $password2= password_hash($cpassword, PASSWORD_DEFAULT);
 
