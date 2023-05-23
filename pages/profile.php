@@ -195,7 +195,7 @@ else{
               </a>
             </li>
               <li class="nav-item px-3 d-flex align-items-center">
-            <a  href="logout2.php" ><input type="submit"  class="btn btn-outline-primary btn-sm mb-0 " value="Logout">
+            <a  href="https://www.psd2htmlx.com/w/dashboard/pages/logout2.php" ><input type="submit"  class="btn btn-outline-primary btn-sm mb-0 " value="Logout">
 </a>
 </li>
               <li class="nav-item px-3 d-flex align-items-center">
