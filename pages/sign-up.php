@@ -90,7 +90,7 @@ error_reporting(E_ALL);
                     </div>
                      <div class="input-group input-group-outline mb-3">
                       <label class="form-label">Confirm-Password</label>
-                      <input type="password" class="form-control" id="confirm_pass" name="cpassword" onchange="validate_password()">
+                      <input type="password" class="form-control" id="confirm_pass" name="cpassword" onkeydown="validate_password()">
                     </div>
                     <span id="wrong_pass_alert"></span>
 
