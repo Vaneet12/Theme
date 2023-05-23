@@ -1,5 +1,4 @@
 function validate_password() {
-    alert("click ok for next step");
     var pass = document.getElementById('pass').value;
     var confirm_pass = document.getElementById('confirm_pass').value;
     if (pass != confirm_pass) {
