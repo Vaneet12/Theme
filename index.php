@@ -149,7 +149,7 @@ tables
   </a>
 </li>
 <li class="nav-item">
-  <a class="nav-link text-white" href="href="https://www.psd2htmlx.com/w/dashboard/pages/tables1.php">
+  <a class="nav-link text-white" href="https://www.psd2htmlx.com/w/dashboard/pages/tables1.php">
     
       <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
         <i class="material-icons opacity-10">shopping_cart_checkout</i>
@@ -304,12 +304,9 @@ tables
             </div>
           </a>
         </li>
-                                               <li class="nav-item px-3 d-flex align-items-center">
-            <a  href="logout2.php" ><input type="submit"  class="btn btn-outline-primary btn-sm mb-0 " value="Logout">
-</a>
-</li>
+                                          
           <li class="nav-item px-3 d-flex align-items-center">
-            <a  href="https://www.psd2htmlx.com/w/dashboard/pages/logout2.php" ><input type="submit"  class="btn btn-outline-primary btn-sm mb-0 " value="Logout">
+            <a  href="pages/logout2.php" ><input type="submit"  class="btn btn-outline-primary btn-sm mb-0 " value="Logout">
 </a>
 </li>
         <li class="nav-item px-3 d-flex align-items-center">
