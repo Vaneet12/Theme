@@ -46,7 +46,7 @@ error_reporting(E_ALL);
   <!-- Nepcha Analytics (nepcha.com) -->•••••••••
   <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
   <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
-    <script src="vali2.js"></script> 
+  <script src="vali2.js"></script> 
 
 </head>
 
@@ -55,6 +55,56 @@ error_reporting(E_ALL);
     <div class="row">
       <div class="col-12">
         <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg blur border-radius-lg top-0 z-index-3 shadow position-absolute mt-4 py-2 start-0 end-0 mx-4">
+          <div class="container-fluid ps-2 pe-0">
+            <a class="navbar-brand font-weight-bolder ms-lg-0 ms-3 " href="../pages/dashboard.html">
+              Material Dashboard 2
+            </a>
+            <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon mt-2">
+                <span class="navbar-toggler-bar bar1"></span>
+                <span class="navbar-toggler-bar bar2"></span>
+                <span class="navbar-toggler-bar bar3"></span>
+              </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navigation">
+              <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                  <a class="nav-link d-flex align-items-center me-2 active" aria-current="page" href="../pages/dashboard.html">
+                    <i class="fa fa-chart-pie opacity-6 text-dark me-1"></i>
+                    Dashboard
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link me-2" href="../pages/profile.html">
+                    <i class="fa fa-user opacity-6 text-dark me-1"></i>
+                    Profile
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link me-2" href="../pages/sign-up.html">
+                    <i class="fas fa-user-circle opacity-6 text-dark me-1"></i>
+                    Sign Up
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link me-2" href="../pages/sign-in.php">
+                    <i class="fas fa-key opacity-6 text-dark me-1"></i>
+                    Sign In
+                  </a>
+                </li>
+              </ul>
+              <ul class="navbar-nav d-lg-flex d-none">
+                <li class="nav-item d-flex align-items-center">
+                  <a class="btn btn-outline-primary btn-sm mb-0 me-2" target="_blank" href="https://www.creative-tim.com/builder?ref=navbar-material-dashboard">Online Builder</a>
+                </li>
+                <li class="nav-item">
+                  <a href="https://www.creative-tim.com/product/material-dashboard" class="btn btn-sm mb-0 me-1 bg-gradient-dark">Free download</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
         <!-- End Navbar -->
       </div>
     </div>
@@ -86,11 +136,11 @@ error_reporting(E_ALL);
                     </div>
                     <div class="input-group input-group-outline mb-3">
                       <label class="form-label">Password</label>
-                      <input type="password" class="form-control" name="password" required>
+                      <input type="password" class="form-control" id="pass" name="password" required>
                     </div>
-                     <div class="input-group input-group-outline mb-3">
+                    <div class="input-group input-group-outline mb-3">
                       <label class="form-label">Confirm-Password</label>
-                      <input type="password" class="form-control" id="confirm_pass" name="cpassword" onkeydown="validate_password()">
+                      <input type="password" class="form-control" id="confirm_pass" name="cpassword" onkeyup="validate_password()">
                     </div>
                     <span id="wrong_pass_alert"></span>
 
@@ -100,8 +150,9 @@ error_reporting(E_ALL);
                         I agree the <a href="javascript:;" class="text-dark font-weight-bolder">Terms and Conditions</a>
                       </label>
                     </div>
+
                     <div class="text-center">
-                      <input type="submit" name="submit" class="btn btn-lg bg-gradient-primary btn-lg w-100 mt-4 mb-0" value="Sign Up">
+                      <input type="submit" id="create" name="submit" class="btn btn-lg bg-gradient-primary btn-lg w-100 mt-4 mb-0" value="Sign Up" >
                     </div>
                   </form>
                 </div>
@@ -143,16 +194,14 @@ error_reporting(E_ALL);
 if(isset($_POST['submit'])){
     
 
-
     $name=$_POST['name'];
     $email=$_POST['email'];
     $password=$_POST['password'];
-      $cpassword=$_POST['cpassword'];
-
-  $password1= password_hash($password, PASSWORD_DEFAULT);
+    $cpassword=$_POST['cpassword'];
+   $password1= password_hash($password, PASSWORD_DEFAULT);
    $password2= password_hash($cpassword, PASSWORD_DEFAULT);
 
-    $result = mysqli_query($con,"SELECT * FROM `form` WHERE email = '$email'") or exit(mysqli_error());
+    $result = mysqli_query($con,"SELECT * FROM `form` WHERE email = '$email'") or exit(mysqli_error()); //check for duplicates
     $num_rows = mysqli_num_rows($result); 
     
      if(($num_rows) > 0){
@@ -160,9 +209,9 @@ if(isset($_POST['submit'])){
          exit;
         }
     
-
 //if($fname !="" && $lname !="" && $password !="" && $conf !="" && $gender !="" && $email !="" && $phone !="" && $caste !="" && lang1 !="" && $address !=""){
 else{
+  if($password == $cpassword){
   $query ="INSERT INTO `form`(name,email,password,cpassword) VALUES ('$name','$email','$password1','$password2')";
   $data=mysqli_query($con,$query);
   if($data){
@@ -172,9 +221,17 @@ else{
     echo "<script>alert('You have not been registered')</script>";
   }
 }
+else{
+  echo "<script>alert('Enter similar correct passwords')</script>";
+}
+}
+
 }
 //else{
    // echo "<script> alert('Please fill the form')</script>";
 //}
 //}
+
+
+
 ?>
