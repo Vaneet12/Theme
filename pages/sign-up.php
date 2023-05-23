@@ -139,10 +139,17 @@ if(isset($_POST['submit'])){
     $name=$_POST['name'];
     $email=$_POST['email'];
     $password=$_POST['password'];
+    $result = mysqli_query($con,"SELECT * FROM `form` WHERE email = '$email'") or exit(mysqli_error()); //check for duplicates
+    $num_rows = mysqli_num_rows($result); 
+    
+     if(($num_rows) > 0){
+         echo "<script>alert('Email ID Already Exists')</script>"; 
+         exit;
+        }
     
 
 //if($fname !="" && $lname !="" && $password !="" && $conf !="" && $gender !="" && $email !="" && $phone !="" && $caste !="" && lang1 !="" && $address !=""){
-
+else{
   $query ="INSERT INTO `form`(name,email,password) VALUES ('$name','$email','$password')";
   $data=mysqli_query($con,$query);
   if($data){
@@ -151,6 +158,7 @@ if(isset($_POST['submit'])){
   else{
     echo "not inserted";
   }
+}
 }
 //else{
    // echo "<script> alert('Please fill the form')</script>";
