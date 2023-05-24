@@ -1,7 +1,7 @@
 <?php
 include("connection4.php");
 session_start();
-$userprofile= $_SESSION['user_name'];
+$userprofile= $_SESSION['username'];
 
 $id= $_GET['id'];
 
