@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 24, 2023 at 09:53 AM
+-- Generation Time: May 24, 2023 at 11:21 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.0.25
 
@@ -42,21 +42,6 @@ CREATE TABLE `form` (
 --
 
 INSERT INTO `form` (`ID`, `name`, `email`, `password`, `cpassword`, `created_at`, `updated_at`) VALUES
-(2, 'Vaneet', 'kumar@sdgvb', '123', '', '2023-05-24 07:52:22', '2023-05-24 13:22:22'),
-(3, 'kartik', 'kartik@wesg', '123', '', '2023-05-24 07:52:22', '2023-05-24 13:22:22'),
-(4, 'name', 'vaneet@gmail.com', '123', '', '2023-05-24 07:52:22', '2023-05-24 13:22:22'),
-(5, 'Asedgfv', 'vaneetkumar798@gmail.com', '1', '', '2023-05-24 07:52:22', '2023-05-24 13:22:22'),
-(6, 'sdfxbh', 'vaneetkumar78@gmail.com', 'Vaneet123', 'cpassword', '2023-05-24 07:52:22', '2023-05-24 13:22:22'),
-(7, 'aerdfbh', 'vaneetkumar8@gmail.com', '1', 'cpassword', '2023-05-24 07:52:22', '2023-05-24 13:22:22'),
-(8, 'kom', 'vaneetku98@gmail.com', '123', 'cpassword', '2023-05-24 07:52:22', '2023-05-24 13:22:22'),
-(9, 'opl;', 'olk@gn', '1111', 'cpassword', '2023-05-24 07:52:22', '2023-05-24 13:22:22'),
-(10, 'ghuijgh', 'vaneemar798@gmail.com', '123', 'cpassword', '2023-05-24 07:52:22', '2023-05-24 13:22:22'),
-(11, 'bhikl.j', 'vr798@gmail.com', 'Vaneet123', 'szdxrfhnb b', '2023-05-24 07:52:22', '2023-05-24 13:22:22'),
-(12, 'fvghm', 'vaneetkumarcfghkm798@gmail.com', '43wt6', 'fvkmhjguyhik.l', '2023-05-24 07:52:22', '2023-05-24 13:22:22'),
-(13, 'kgyhftcjk', 'tyfghkjmftcy@dsfnhj', 'dfcghn', 'fghjnmvh gftxhtrfygjhn', '2023-05-24 07:52:22', '2023-05-24 13:22:22'),
-(14, 'dfcgnmjft', 'dcgfjtxdret@cgmjf', 'zderfhb', 'fxdgnjthfxdrfjtngm', '2023-05-24 07:52:22', '2023-05-24 13:22:22'),
-(15, 'zdfgn', 'xfghbnmj@dgnmj', 'cfghm', 'hm vgjgkf', '2023-05-24 07:52:22', '2023-05-24 13:22:22'),
-(16, 'fcghmj', 'rftcgmj@sdfxnbh', '1', '1', '2023-05-24 07:52:22', '2023-05-24 13:22:22'),
 (17, 'David Harrison ', 'dszfhnb@z', '$2y$10$mPpisQ5gEMBicO1hT4iV2u7Yihdot5UURNJhGsGcvoc9zrZYY92SW', '$2y$10$CBuwIT/SDg3zCQWnMutWgOmsqR8lSd4qPADq4VCOluJRSFCfpEuY.', '2023-05-24 07:52:22', '2023-05-24 13:22:22'),
 (18, 'dfghn', 'fvgmbh@dfhnb', '$2y$10$VLcfpOR/faeWqIMBQP9n0e0ycOmXTSb0Md3BhR7dyLPmqBOJN4S2a', '$2y$10$B5F1BMC0Gap/oX4ANeN9cu42JabSrjBjAYLtZt9VstVq8c314Spha', '2023-05-24 07:52:22', '2023-05-24 13:22:22'),
 (19, 'xfgjn', 'zdfxcnvgh@xfvng', '$2y$10$F34d4x2kRMqhg.ED620HTehBGwMgx2pcLghiowf20jQGJ5kZh/bgm', '$2y$10$1gvAY9IqHvWH9U5vYIf9qOHnV/vriLRCP9K9WWlEG6fzzhggPKzvy', '2023-05-24 07:52:22', '2023-05-24 13:22:22'),
