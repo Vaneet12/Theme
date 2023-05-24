@@ -7,10 +7,12 @@ if($userprofile==true){
 
 }
 else{
-    header('location:https://www.psd2htmlx.com/w/dashboard/pages/sign-in.php');
+    header('location:https://localhost/pages/sign-in.php');
 
 }
 ?>
+
+
 <!--
 =========================================================
 * Material Dashboard 2 - v3.1.0
@@ -55,6 +57,7 @@ else{
 <body class="g-sidenav-show  bg-gray-200">
   <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark" id="sidenav-main">
     <div class="sidenav-header">
+      
       <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
       <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/material-dashboard/pages/dashboard " target="_blank">
         <img src="../assets/img/logo-ct.png" class="navbar-brand-img h-100" alt="main_logo">
@@ -65,7 +68,7 @@ else{
     <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link text-white " href="https://www.psd2htmlx.com/w/dashboard/pages/dashboard.php">
+          <a class="nav-link text-white " href="/https://www.psd2htmlx.com/w/dashboard/pages/dashboard.php">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">dashboard</i>
             </div>
@@ -80,7 +83,7 @@ else{
             <span class="nav-link-text ms-1">Users</span>
           </a>
         </li>
-             <li class="nav-item">
+        <li class="nav-item">
   <a class="nav-link text-white" href="https://www.psd2htmlx.com/w/dashboard/pages/tables1.php">
     
       <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -90,6 +93,7 @@ else{
     <span class="nav-link-text ms-1">Products</span>
   </a>
 </li>
+
         <li class="nav-item">
           <a class="nav-link text-white " href="https://www.psd2htmlx.com/w/dashboard/pages/billing.php">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -192,8 +196,8 @@ else{
                 </div>
               </a>
             </li>
-              <li class="nav-item px-3 d-flex align-items-center">
-            <a  href="https://www.psd2htmlx.com/w/dashboard/pages/logout2.php" ><input type="submit"  class="btn btn-outline-primary btn-sm mb-0 " value="Logout">
+            <li class="nav-item px-3 d-flex align-items-center">
+            <a  href="logout2.php" ><input type="submit"  class="btn btn-outline-primary btn-sm mb-0 " value="Logout">
 </a>
 </li>
             <li class="nav-item px-3 d-flex align-items-center">
@@ -275,7 +279,7 @@ else{
               </ul>
             </li>
             <li class="nav-item d-flex align-items-center">
-              <a href="https://www.psd2htmlx.com/w/dashboard/pages/sign-in.php" class="nav-link text-body font-weight-bold px-0">
+              <a href="../pages/sign-in.html" class="nav-link text-body font-weight-bold px-0">
                 <i class="fa fa-user me-sm-1"></i>
                 <span class="d-sm-inline d-none">Sign In</span>
               </a>
@@ -297,15 +301,7 @@ else{
             <div class="card-body px-0 pb-2">
               <div class="table-responsive p-0">
               <?php
-include("connection4.php");
-$userprofile=$_SESSION['user_name'];
-if($userprofile==true){
 
-}
-else{
-    header('location:sign-in.php');
-
-}
 $query="SELECT * FROM `form`";
 $data=mysqli_query($con,$query);
 $total= mysqli_num_rows($data);
@@ -316,7 +312,7 @@ echo $total;
 
 if($total !=0){
     ?>
-<h2 align="center"><mark>User details</mark></h2>
+<h2 align="center"><mark>Displaying All Records</mark></h2>
 <center><table border="0" cellspacing="7" width="100%" class="table" id="table-container">
     <tr>
     <th width="15%">ID</th>
@@ -326,7 +322,7 @@ if($total !=0){
     <th width="30%">Operations</th>
 
 
-</t r>
+</tr>
 
 
 <?php
@@ -352,7 +348,7 @@ if($total !=0){
 }
 else{
     echo "no records found";
-}html"
+}
 ?>
 
 </table></center>
@@ -371,218 +367,61 @@ else{
             </div>
             <div class="card-body px-0 pb-2">
               <div class="table-responsive p-0">
-                <table class="table align-items-center justify-content-center mb-0">
-                  <thead>
-                    <tr>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Project</th>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Budget</th>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Status</th>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2">Completion</th>
-                      <th></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <div class="d-flex px-2">
-                          <div>
-                            <img src="../assets/img/small-logos/logo-asana.svg" class="avatar avatar-sm rounded-circle me-2" alt="spotify">
-                          </div>
-                          <div class="my-auto">
-                            <h6 class="mb-0 text-sm">Asana</h6>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <p class="text-sm font-weight-bold mb-0">$2,500</p>
-                      </td>
-                      <td>
-                        <span class="text-xs font-weight-bold">working</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <div class="d-flex align-items-center justify-content-center">
-                          <span class="me-2 text-xs font-weight-bold">60%</span>
-                          <div>
-                            <div class="progress">
-                              <div class="progress-bar bg-gradient-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
-                            </div>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="align-middle">
-                        <button class="btn btn-link text-secondary mb-0">
-                          <i class="fa fa-ellipsis-v text-xs"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="d-flex px-2">
-                          <div>
-                            <img src="../assets/img/small-logos/github.svg" class="avatar avatar-sm rounded-circle me-2" alt="invision">
-                          </div>
-                          <div class="my-auto">
-                            <h6 class="mb-0 text-sm">Github</h6>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <p class="text-sm font-weight-bold mb-0">$5,000</p>
-                      </td>
-                      <td>
-                        <span class="text-xs font-weight-bold">done</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <div class="d-flex align-items-center justify-content-center">
-                          <span class="me-2 text-xs font-weight-bold">100%</span>
-                          <div>
-                            <div class="progress">
-                              <div class="progress-bar bg-gradient-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
-                            </div>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="align-middle">
-                        <button class="btn btn-link text-secondary mb-0" aria-haspopup="true" aria-expanded="false">
-                          <i class="fa fa-ellipsis-v text-xs"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="d-flex px-2">
-                          <div>
-                            <img src="../assets/img/small-logos/logo-atlassian.svg" class="avatar avatar-sm rounded-circle me-2" alt="jira">
-                          </div>
-                          <div class="my-auto">
-                            <h6 class="mb-0 text-sm">Atlassian</h6>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <p class="text-sm font-weight-bold mb-0">$3,400</p>
-                      </td>
-                      <td>
-                        <span class="text-xs font-weight-bold">canceled</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <div class="d-flex align-items-center justify-content-center">
-                          <span class="me-2 text-xs font-weight-bold">30%</span>
-                          <div>
-                            <div class="progress">
-                              <div class="progress-bar bg-gradient-danger" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="30" style="width: 30%;"></div>
-                            </div>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="align-middle">
-                        <button class="btn btn-link text-secondary mb-0" aria-haspopup="true" aria-expanded="false">
-                          <i class="fa fa-ellipsis-v text-xs"></i>
-                        </button>
-                      </td>
-                    </tr>html"
-                    <tr>
-                      <td>
-                        <div class="d-flex px-2">
-                          <div>
-                            <img src="../assets/img/small-logos/bootstrap.svg" class="avatar avatar-sm rounded-circle me-2" alt="webdev">
-                          </div>
-                          <div class="my-auto">
-                            <h6 class="mb-0 text-sm">Bootstrap</h6>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <p class="text-sm font-weight-bold mb-0">$14,000</p>
-                      </td>
-                      <td>
-                        <span class="text-xs font-weight-bold">working</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <div class="d-flex align-items-center justify-content-center">
-                          <span class="me-2 text-xs font-weight-bold">80%</span>
-                          <div>
-                            <div class="progress">
-                              <div class="progress-bar bg-gradient-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="80" style="width: 80%;"></div>
-                            </div>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="align-middle">
-                        <button class="btn btn-link text-secondary mb-0" aria-haspopup="true" aria-expanded="false">
-                          <i class="fa fa-ellipsis-v text-xs"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="d-flex px-2">
-                          <div>
-                            <img src="../assets/img/small-logos/logo-slack.svg" class="avatar avatar-sm rounded-circle me-2" alt="slack">
-                          </div>
-                          <div class="my-auto">
-                            <h6 class="mb-0 text-sm">Slack</h6>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <p class="text-sm font-weight-bold mb-0">$1,000</p>
-                      </td>
-                      <td>
-                        <span class="text-xs font-weight-bold">canceled</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <div class="d-flex align-items-center justify-content-center">
-                          <span class="me-2 text-xs font-weight-bold">0%</span>
-                          <div>
-                            <div class="progress">
-                              <div class="progress-bar bg-gradient-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="0" style="width: 0%;"></div>
-                            </div>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="align-middle">
-                        <button class="btn btn-link text-secondary mb-0" aria-haspopup="true" aria-expanded="false">
-                          <i class="fa fa-ellipsis-v text-xs"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="d-flex px-2">
-                          <div>
-                            <img src="../assets/img/small-logos/devto.svg" class="avatar avatar-sm rounded-circle me-2" alt="xd">
-                          </div>
-                          <div class="my-auto">
-                            <h6 class="mb-0 text-sm">Devto</h6>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <p class="text-sm font-weight-bold mb-0">$2,300</p>
-                      </td>
-                      <td>
-                        <span class="text-xs font-weight-bold">done</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <div class="d-flex align-items-center justify-content-center">
-                          <span class="me-2 text-xs font-weight-bold">100%</span>
-                          <div>
-                            <div class="progress">
-                              <div class="progress-bar bg-gradient-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
-                            </div>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="align-middle">
-                        <button class="btn btn-link text-secondary mb-0" aria-haspopup="true" aria-expanded="false">
-                          <i class="fa fa-ellipsis-v text-xs"></i>
-                        </button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+              <?php
+$query="SELECT * FROM `form1`";
+$data=mysqli_query($con,$query);
+$total= mysqli_num_rows($data);
+
+echo $total;
+
+
+
+if($total !=0){
+    ?>
+<h2 align="center"><mark>Product details</mark></h2>
+<center><table border="0" cellspacing="7" width="100%" class="table" id="table-container">
+    <tr>
+    <th width="15%">ID</th>
+    <th width="15%">Product Name</th>
+    <th width="10%">code</th>
+    <th width="15%">Image</th>
+    <th width="5%">Price</th>
+
+    <th width="30%">Operations</th>
+
+
+</t r>
+
+
+<?php
+  while($result=mysqli_fetch_assoc($data))
+  {
+    echo "<tr>
+    <td>".$result['id']."</td>
+
+    <td>".$result['product']."</td>
+    <td>".$result['code']."</td>
+    <td>". "<img src=".$result['image']. ' alt="not found" width=100px height="100px">' ."</td>
+    <td>".$result['price']."</td>
+
+
+    <td>
+    <a  href='delete2.php?id=$result[id]'><input type='submit' value='Delete' class='delete btn btn-outline-primary btn-sm mb-0' onclick='return checkdelete()'>
+    </a>
+    <td><a  href='view2.php?id=$result[id]'><input type='submit' value='View' class='update btn btn-outline-primary btn-sm mb-0'></a>
+    </td>
+
+
+</tr>";
+
+  }
+}
+else{
+    echo "no records found";
+}
+?>
+
+</table></center></div>
             </div>
           </div>
         </div>
