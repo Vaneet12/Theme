@@ -190,5 +190,9 @@ if(isset($_POST['submit'])){
             }
         }
 }
+  else{
+                echo '<script>alert("Invalid Credentials")</script>';
+            }
+  
 }
 ?>
