@@ -173,17 +173,22 @@ error_reporting(E_ALL);
 if(isset($_POST['submit'])){
     $username=$_POST['username'];
     $password=$_POST['password'];
-    $query="SELECT * FROM `form` WHERE email='$username' && password='$password'";
-    $data=mysqli_query($con,$query);
-$total=mysqli_num_rows($data);
-echo $total;
-if($total){
-    $_SESSION['user_name']=$username;
-echo "success";
-header("location:https://www.psd2htmlx.com/w/dashboard/index.php");
-}
-else{
-    echo "<script>alert('Incorrect details')</script>";                           
+ $sql = "Select * from `form` where email='$username'";
+    $result = mysqli_query($con, $sql);
+    $num = mysqli_num_rows($result);
+    if ($num == 1){
+        while($row=mysqli_fetch_assoc($result)){
+            if (password_verify($password, $row['password'])){ 
+                $login = true;
+                session_start();
+                $_SESSION['loggedin'] = true;
+                $_SESSION['username'] = $username;
+                header("location: https://www.psd2htmlx.com/w/dashboard/index.php");
+            } 
+            else{
+                echo '<script>alert("Invalid Credentials")</script>';
+            }
+        }
 }
 }
 ?>
