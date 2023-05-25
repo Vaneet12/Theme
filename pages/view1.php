@@ -54,9 +54,15 @@ $result=mysqli_fetch_assoc($data);
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
   <!-- CSS Files -->
   <link id="pagestyle" href="../assets/css/material-dashboard.css?v=3.1.0" rel="stylesheet" />
-  <!-- Nepcha Analytics (nepcha.com) -->•••••••••
+  <!-- Nepcha Analytics (nepcha.com) -->
   <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
   <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
+    <style>
+  .logout{
+    margin-top:300px;
+  }
+</style>
+
 </head>
 
 <body class="">
@@ -93,12 +99,15 @@ $result=mysqli_fetch_assoc($data);
                       <label class="form-label">Email : <?php echo $result['email']; ?></label>
                     </div>
                     <div class="input-group input-group-outline mb-3">
-                      <label class="form-label">Password : <?php echo $result['password']; ?></label>
+                      <label class="form-label">Phone : <?php echo $result['phone']; ?></label>
                     </div>
-                      <li class="nav-item px-3 d-flex align-items-center">
+                       <div class="input-group input-group-outline mb-3">
+                      <label class="form-label">Address : <?php echo $result['address']; ?></label>
+                    </div>
+                      <div class="logout">
             <a  href="logout2.php" ><input type="submit"  class="btn btn-outline-primary btn-sm mb-0 " value="Logout">
 </a>
-</li>
+                      </div>
                     </form>
                 </div>
 </div>
@@ -129,26 +138,3 @@ $result=mysqli_fetch_assoc($data);
 </body>
 
 </html>
-<?php
-if($_POST['update']){
-    $name=$_POST['name'];
-    $email=$_POST['email'];
-    $password=$_POST['password'];
-
-
-
-  $query="Update `form` set `name`='$name',`email`='$email',`password`='$password' WHERE ID='$id'";
-  $data=mysqli_query($con,$query);
-  if($data){
-    echo "<script>alert('Record Updated')</script>";
-    ?>
-          <meta http-equiv = "refresh" content = "0; url = http://localhost/pages/tables.php" />
-
-    <?php
-  }
-  else{
-    echo "not updated";
-  }
-}
-
-?>
