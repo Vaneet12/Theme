@@ -147,6 +147,22 @@ $result=mysqli_fetch_assoc($data);
                       <label class="form-label">Password</label>
                       <input type="password" class="form-control" name="password" value=" <?php echo $result['password']; ?> ">
                     </div>
+                      <div class="input-group input-group-outline mb-3">
+                      <label class="form-label">Confirm-Password</label>
+                      <input type="password" class="form-control" name="cpassword" value=" <?php echo $result['cpassword']; ?> ">
+                    </div>
+                    
+                    
+                    <div class="input-group input-group-outline mb-3">
+                      <label class="form-label">Phone</label>
+                      <input type="tel" class="form-control" name="phone" value=" <?php echo $result['phone']; ?> ">
+                    </div>
+                    <div class="input-group input-group-outline mb-3">
+                      <label class="form-label">Address</label>
+                      <input type="text" class="form-control" name="address" value=" <?php echo $result['address']; ?> ">
+                    </div>
+                    
+                      
                     <div class="form-check form-check-info text-start ps-0">
                       <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
                       <label class="form-check-label" for="flexCheckDefault">
@@ -161,7 +177,7 @@ $result=mysqli_fetch_assoc($data);
                 <div class="card-footer text-center pt-0 px-lg-2 px-1">
                   <p class="mb-2 text-sm mx-auto">
                     Already have an account?
-                    <a href="../pages/sign-in.html" class="text-primary text-gradient font-weight-bold">Sign in</a>
+                    <a href="../pages/sign-in.php" class="text-primary text-gradient font-weight-bold">Sign in</a>
                   </p>
                 </div>
               </div>
@@ -197,10 +213,16 @@ if($_POST['update']){
     $name=$_POST['name'];
     $email=$_POST['email'];
     $password=$_POST['password'];
+    $cpassword=$_POST['cpassword'];
+    $phone=$_POST['phone'];
+    $address=$_POST['address'];
+    $password1= password_hash($password, PASSWORD_DEFAULT);
+    $password2= password_hash($cpassword, PASSWORD_DEFAULT);
+ 
 
 
 
-  $query="Update `form` set `name`='$name',`email`='$email',`password`='$password' WHERE ID='$id'";
+  $query="Update `form` set `name`='$name',`email`='$email',`password`='$password1',`cpassword`='$password2',`phone`='$phone',`address`='$address' WHERE ID='$id'";
   $data=mysqli_query($con,$query);
   if($data){
     echo "<script>alert('Record Updated')</script>";
@@ -210,8 +232,13 @@ if($_POST['update']){
     <?php
   }
   else{
-    echo "not updated";
+    echo "<script>alert('You have not been registered')</script>";
   }
+}
+else{
+  echo "<script>alert('Enter similar correct passwords')</script>";
+
+}
 }
 
 ?>
