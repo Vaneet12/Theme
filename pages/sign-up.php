@@ -142,6 +142,15 @@ error_reporting(E_ALL);
                       <label class="form-label">Confirm-Password</label>
                       <input type="password" class="form-control" id="confirm_pass" name="cpassword" onkeyup="validate_password()">
                     </div>
+                    <div class="input-group input-group-outline mb-3">
+                      <label class="form-label">Phone</label>
+                      <input type="tel" class="form-control" id="phone" name="phone" required>
+                    </div>
+                    <div class="input-group input-group-outline mb-3">
+                      <label class="form-label">Address</label>
+                      <input class="form-control" id="address" name="address" required>
+                    </div>
+                   
                     <span id="wrong_pass_alert"></span>
 
                     <div class="form-check form-check-info text-start ps-0">
@@ -198,6 +207,10 @@ if(isset($_POST['submit'])){
     $email=$_POST['email'];
     $password=$_POST['password'];
     $cpassword=$_POST['cpassword'];
+  $phone=$_POST['phone'];
+    $address=$_POST['address'];
+
+  
    $password1= password_hash($password, PASSWORD_DEFAULT);
    $password2= password_hash($cpassword, PASSWORD_DEFAULT);
 
@@ -212,7 +225,7 @@ if(isset($_POST['submit'])){
 //if($fname !="" && $lname !="" && $password !="" && $conf !="" && $gender !="" && $email !="" && $phone !="" && $caste !="" && lang1 !="" && $address !=""){
 else{
   if($password == $cpassword){
-  $query ="INSERT INTO `form`(name,email,password,cpassword) VALUES ('$name','$email','$password1','$password2')";
+  $query ="INSERT INTO `form`(name,email,password,cpassword,phone,address) VALUES ('$name','$email','$password1','$password2','$phone','$address')";
   $data=mysqli_query($con,$query);
   if($data){
     echo "<script>alert('You have been registered')</script>";
