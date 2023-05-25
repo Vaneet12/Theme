@@ -316,10 +316,11 @@ if($total !=0){
 <center><table border="0" cellspacing="7" width="100%" class="table" id="table-container">
     <tr>
     <th width="15%">ID</th>
-    <th width="15%">Name</th>
-    <th width="15%">Email</th>
-    <th width="15%">Password</th>
-    <th width="30%">Operations</th>
+    <th width="15%">Author</th>
+    <th width="15%">Function</th>
+    <th width="15%">Operations</th>
+    <th width="30%">View</th>
+
 
 
 </tr>
@@ -329,12 +330,16 @@ if($total !=0){
   while($result=mysqli_fetch_assoc($data))
   {
     echo "<tr>
-    <td>".$result['ID']."</td>
-
-    <td>".$result['name']."</td>
-    <td>".$result['email']."</td>
-    <td>".$result['password']."</td>
-
+     <td>".$result['ID']."</td>
+<td>
+<div class='d-flex flex-column justify-content-center'>
+    <h6 class='mb-0 text-sm'>".$result['name']."</h6>
+    <p class='text-xs text-secondary mb-0'>".$result['email']."</p></div></td>
+    <td>
+    <div class='d-flex flex-column justify-content-center'>
+        <h6 class='mb-0 text-sm'>".$result['phone']."</h6>
+        <p class='text-xs text-secondary mb-0'>".$result['address']."</p></div></td>
+   
     <td><a  href='edit1.php?ID=$result[ID]'><input type='submit' value='Update' class='update btn btn-outline-primary btn-sm mb-0'></a>
     <a  href='delete1.php?ID=$result[ID]'><input type='submit' value='Delete' class='delete btn btn-outline-primary btn-sm mb-0' onclick='return checkdelete()'>
     </a>
