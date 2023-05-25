@@ -337,7 +337,7 @@ if($total !=0){
     <p class='text-xs text-secondary mb-0'>".$result['email']."</p></div></td>
     <td>
     <div class='d-flex flex-column justify-content-center'>
-        <h6 class='mb-0 text-sm'>".$result['phone']."</h6>
+        <p class='text-xs font-weight-bold mb-0'>".$result['phone']."</p>
         <p class='text-xs text-secondary mb-0'>".$result['address']."</p></div></td>
    
     <td><a  href='edit1.php?ID=$result[ID]'><input type='submit' value='Update' class='update btn btn-outline-primary btn-sm mb-0'></a>
