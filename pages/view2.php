@@ -5,7 +5,7 @@ $userprofile= $_SESSION['username'];
 
 $id= $_GET['id'];
 
-$query="SELECT * FROM `form1` where id='$id'";
+$query="SELECT * FROM `product` where id='$id'";
 $data=mysqli_query($con,$query);
 $total= mysqli_num_rows($data);
 $result=mysqli_fetch_assoc($data);
