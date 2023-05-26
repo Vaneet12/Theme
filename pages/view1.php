@@ -11,7 +11,7 @@ else{
     header('location:sign-in.php');
 
 }
-$query="SELECT * FROM `form` where ID='$id'";
+$query="SELECT * FROM `user` where ID='$id'";
 $data=mysqli_query($con,$query);
 $total= mysqli_num_rows($data);
 $result=mysqli_fetch_assoc($data);
