@@ -11,7 +11,7 @@ else{
     header('location:sign-in.php');
 
 }
-$query="SELECT * FROM `form` where ID='$id'";
+$query="SELECT * FROM `user` where ID='$id'";
 $data=mysqli_query($con,$query);
 $total= mysqli_num_rows($data);
 $result=mysqli_fetch_assoc($data);
@@ -227,7 +227,7 @@ if($_POST['update']){
   if($data){
     echo "<script>alert('Record Updated')</script>";
     ?>
-          <meta http-equiv = "refresh" content = "0; url = http://localhost/pages/tables.php" />
+          <meta http-equiv = "refresh" content = "0; url = http://https://www.psd2htmlx.com/w/dashboard/pages/tables.php" />
 
     <?php
   }
