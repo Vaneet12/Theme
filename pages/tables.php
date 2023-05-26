@@ -295,57 +295,63 @@ else{
           <div class="card my-4">
             <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
               <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
-                <h6 class="text-white text-capitalize ps-3">Authors table</h6>
+                <h6 class="text-white text-capitalize ps-3">Users table</h6>
               </div>
             </div>
             <div class="card-body px-0 pb-2">
               <div class="table-responsive p-0">
               <?php
 
-$query="SELECT * FROM `form`";
+$query="SELECT * FROM `user`";
 $data=mysqli_query($con,$query);
 $total= mysqli_num_rows($data);
 
-echo $total;
 
 
 
 if($total !=0){
     ?>
-<h2 align="center"><mark>Displaying All Records</mark></h2>
-<center><table border="0" cellspacing="7" width="100%" class="table" id="table-container">
-    <tr>
-    <th width="15%">ID</th>
-    <th width="15%">Author</th>
-    <th width="15%">Function</th>
-    <th width="15%">Operations</th>
-    <th width="30%">View</th>
-
-
-
-</tr>
+ <table class="table align-items-center mb-0">
+                  <thead>
+                    <tr>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Users</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Contact details</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">View</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Delete</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Edit</th>
+                    </tr>
+                  </thead>
 
 
 <?php
   while($result=mysqli_fetch_assoc($data))
   {
     echo "<tr>
-     <td>".$result['ID']."</td>
-<td>
-<div class='d-flex flex-column justify-content-center'>
-    <h6 class='mb-0 text-sm'>".$result['name']."</h6>
-    <p class='text-xs text-secondary mb-0'>".$result['email']."</p></div></td>
     <td>
-    <div class='d-flex flex-column justify-content-center'>
-        <p class='text-xs font-weight-bold mb-0'>".$result['phone']."</p>
-        <p class='text-xs text-secondary mb-0'>".$result['address']."</p></div></td>
-   
-    <td><a  href='edit1.php?ID=$result[ID]'><input type='submit' value='Update' class='update btn btn-outline-primary btn-sm mb-0'></a>
-    <a  href='delete1.php?ID=$result[ID]'><input type='submit' value='Delete' class='delete btn btn-outline-primary btn-sm mb-0' onclick='return checkdelete()'>
-    </a>
-    <td><a  href='view1.php?ID=$result[ID]'><input type='submit' value='View' class='update btn btn-outline-primary btn-sm mb-0'></a>
-    </td>
-
+    <div class='d-flex px-2 py-1'>
+      <div>
+        <img src='../assets/img/team-2.jpg' class='avatar avatar-sm me-3 border-radius-lg' alt='user1'>
+      </div>
+      <div class='d-flex flex-column justify-content-center'>
+        <h6 class='mb-0 text-sm'>".$result['name']."</h6>
+        <p class='text-xs text-secondary mb-0'>".$result['email']."</p>
+      </div>
+    </div>
+  </td>
+  <td>
+    <p class='text-xs font-weight-bold mb-0'>".$result['phone']."</p>
+    <p class='text-xs text-secondary mb-0'>".$result['address']."</p>
+  </td>
+  <td class='align-middle text-center text-sm'>
+    <span class='badge badge-sm bg-gradient-success'><a  href='view1.php?ID=$result[ID]'>View</a></span>
+  </td>
+  <td class='align-middle text-center text-sm'>
+  <a  href='delete1.php?ID=$result[ID]' onclick='return checkdelete()'>
+  <i class='material-icons w3-xxxlarge'>delete</i> </a>
+  </td>
+ <td class='align-middle text-center text-sm'> <a  href='edit1.php?ID=$result[ID]' class='text-secondary font-weight-bold text-xs' data-toggle='tooltip' data-original-title='Edit user'>
+  Edit
+</a></td>
 
 </tr>";
 
@@ -356,13 +362,13 @@ else{
 }
 ?>
 
-</table></center>
+</table>
 </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="row">
+     <div class="row">
         <div class="col-12">
           <div class="card my-4">
             <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
