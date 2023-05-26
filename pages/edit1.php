@@ -220,6 +220,7 @@ if($_POST['update']){
     $password2= password_hash($cpassword, PASSWORD_DEFAULT);
  
 
+    if($password == $cpassword){
 
 
   $query="Update `form` set `name`='$name',`email`='$email',`password`='$password1',`cpassword`='$password2',`phone`='$phone',`address`='$address' WHERE ID='$id'";
