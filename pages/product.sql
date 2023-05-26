@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 22, 2023 at 03:20 PM
+-- Generation Time: May 26, 2023 at 11:23 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.0.25
 
@@ -24,10 +24,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `form1`
+-- Table structure for table `product`
 --
 
-CREATE TABLE `form1` (
+CREATE TABLE `product` (
   `id` int(11) NOT NULL,
   `product` varchar(255) NOT NULL,
   `code` varchar(255) NOT NULL,
@@ -36,10 +36,10 @@ CREATE TABLE `form1` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `form1`
+-- Dumping data for table `product`
 --
 
-INSERT INTO `form1` (`id`, `product`, `code`, `image`, `price`) VALUES
+INSERT INTO `product` (`id`, `product`, `code`, `image`, `price`) VALUES
 (2, 'EXP Portable Hard Drive', 'USB02', 'https://rukminim1.flixcart.com/image/416/416/external-hard-drive/h/z/g/seagate-stbx500300-original-imadbe9wh8ufh845.jpeg?q=70', '800.00'),
 (3, 'Luxury Ultra thin Wrist Watch', 'wristWear03', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQUSjX7HTDzuAuTNIXzT88VY9srecixKkfJRmYmAwkOLZS22ieJUf5VSeHGbutIPde5XA&usqp=CAU', '300.00');
 
@@ -48,9 +48,9 @@ INSERT INTO `form1` (`id`, `product`, `code`, `image`, `price`) VALUES
 --
 
 --
--- Indexes for table `form1`
+-- Indexes for table `product`
 --
-ALTER TABLE `form1`
+ALTER TABLE `product`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -58,9 +58,9 @@ ALTER TABLE `form1`
 --
 
 --
--- AUTO_INCREMENT for table `form1`
+-- AUTO_INCREMENT for table `product`
 --
-ALTER TABLE `form1`
+ALTER TABLE `product`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
