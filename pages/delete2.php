@@ -1,7 +1,7 @@
 <?php
 include ("connection4.php");
 $id= $_GET['id'];
-$query="DELETE FROM form1 WHERE id='$id'";
+$query="DELETE FROM product WHERE id='$id'";
 $data=mysqli_query($con,$query);
 if($data)
 {
