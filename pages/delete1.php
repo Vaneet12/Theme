@@ -9,7 +9,7 @@ if($data)
     ?>
 
 
-<meta http-equiv = "refresh" content = "0; url =  http://localhost/pages/tables.php" />
+<meta http-equiv = "refresh" content = "0; url =  https://www.psd2htmlx.com/w/dashboard/pages/tables.php" />
 
     <?php
 }
