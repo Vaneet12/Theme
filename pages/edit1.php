@@ -228,7 +228,7 @@ if($_POST['update']){
   if($data){
     echo "<script>alert('Record Updated')</script>";
     ?>
-          <meta http-equiv = "refresh" content = "0; url = http://https://www.psd2htmlx.com/w/dashboard/pages/tables.php" />
+          <meta http-equiv = "refresh" content = "0; url = https://www.psd2htmlx.com/w/dashboard/pages/tables.php" />
 
     <?php
   }
