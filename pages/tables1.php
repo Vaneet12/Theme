@@ -311,49 +311,56 @@ else{
             <div class="card-body px-0 pb-2">
               <div class="table-responsive p-0">
               <?php
-$query="SELECT * FROM `form1`";
+$query="SELECT * FROM `product`";
 $data=mysqli_query($con,$query);
 $total= mysqli_num_rows($data);
 
-echo $total;
 
 
 
 if($total !=0){
     ?>
-<h2 align="center"><mark>Product details</mark></h2>
-<center><table border="0" cellspacing="7" width="100%" class="table" id="table-container">
-    <tr>
-    <th width="15%">ID</th>
-    <th width="15%">Product Name</th>
-    <th width="10%">code</th>
-    <th width="15%">Image</th>
-    <th width="5%">Price</th>
-
-    <th width="30%">Operations</th>
-
-
-</t r>
+<table class='table align-items-center justify-content-center mb-0'>
+                  <thead>
+                    <tr>
+                      <th class='text-uppercase text-secondary text-xxs font-weight-bolder opacity-7'>Product</th>
+                      <th class='text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2'>Price</th>
+                      <th class='text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2'>Code</th>
+                      <th class='text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2'>View</th>
+                    </tr>
+    
 
 
 <?php
   while($result=mysqli_fetch_assoc($data))
   {
     echo "<tr>
-    <td>".$result['id']."</td>
-
-    <td>".$result['product']."</td>
-    <td>".$result['code']."</td>
-    <td>". "<img src=".$result['image']. ' alt="not found" width=100px height="100px">' ."</td>
-    <td>".$result['price']."</td>
-
-
-    <td>
-    <a  href='delete2.php?id=$result[id]'><input type='submit' value='' class='delete' onclick='return checkdelete()'>
-    <i class='material-icons w3-xxxlarge'>delete</i> </a>
-    <td><a  href='view2.php?id=$result[id]'><input type='submit' value='View' class='update btn btn-outline-primary btn-sm mb-0'></a>
-    </td>
-
+    
+                      <td>
+                        <div class='d-flex px-2'>
+                          <div>"
+                          ."<img src=".$result['image']. " class='avatar avatar-sm rounded-circle me-2' alt='spotify'>.
+                          </div>
+                          <div class='my-auto'>
+                            <h6 class='mb-0 text-sm'>".$result['product']."</h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class='text-sm font-weight-bold mb-0'>".$result['price']."</p>
+                      </td>
+                      <td>
+                        <span class='text-xs font-weight-bold'>".$result['code']."</span>
+                      </td>
+                     
+                      <td class='align-middle text-center text-sm'>
+    <span class='badge badge-sm bg-gradient-success'><a  href='view2.php?id=$result[id]'>View</a></span>
+  </td>
+  <td class='align-middle text-center text-sm'>
+  <a  href='delete2.php?id=$result[id]' onclick='return checkdelete()'>
+  <i class='material-icons w3-xxxlarge'>delete</i> </a>
+  </td>
+ 
 
 </tr>";
 
@@ -364,12 +371,12 @@ else{
 }
 ?>
 
-</table></center></div>
+</table></div>
             </div>
           </div>
         </div>
       </div>
-      <footer class="footer py-4  ">
+    <footer class="footer py-4  ">
         <div class="container-fluid">
           <div class="row align-items-center justify-content-lg-between">
             <div class="col-lg-6 mb-lg-0 mb-4">
