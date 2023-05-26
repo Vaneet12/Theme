@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 25, 2023 at 10:25 AM
+-- Generation Time: May 26, 2023 at 11:22 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.0.25
 
@@ -24,11 +24,12 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `form`
+-- Table structure for table `user`
 --
 
-CREATE TABLE `form` (
+CREATE TABLE `user` (
   `ID` int(11) NOT NULL,
+  `image` varchar(255) NOT NULL,
   `name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
@@ -40,20 +41,13 @@ CREATE TABLE `form` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `form`
---
-
-INSERT INTO `form` (`ID`, `name`, `email`, `password`, `cpassword`, `phone`, `address`, `created_at`, `updated_at`) VALUES
-(35, 'fukjm', 'ftcgyhk@sfhb', '$2y$10$tnQ0LpSavBNwcr2NjzP9D.VY3xUl/.p1b4quVVZC1olBYDphnPiGm', '$2y$10$JLUY7HeSWp5NuGF93HeeW./q4L8LAe6KbUvuJdVNGQ3YG222/t8za', ' 1234567890 ', ' sbgf ', '2023-05-25 07:55:16', '2023-05-25 13:25:56');
-
---
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `form`
+-- Indexes for table `user`
 --
-ALTER TABLE `form`
+ALTER TABLE `user`
   ADD PRIMARY KEY (`ID`);
 
 --
@@ -61,10 +55,10 @@ ALTER TABLE `form`
 --
 
 --
--- AUTO_INCREMENT for table `form`
+-- AUTO_INCREMENT for table `user`
 --
-ALTER TABLE `form`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+ALTER TABLE `user`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
