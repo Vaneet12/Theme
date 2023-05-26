@@ -7,7 +7,7 @@ if($userprofile==true){
 
 }
 else{
-    header('location:https://localhost/pages/sign-in.php');
+    header('location:https://www.psd2htmlx.com/w/dashboard/pages/sign-in.php');
 
 }
 ?>
@@ -364,75 +364,6 @@ else{
 
 </table>
 </div>
-            </div>
-          </div>
-        </div>
-      </div>
-     <div class="row">
-        <div class="col-12">
-          <div class="card my-4">
-            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
-              <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
-                <h6 class="text-white text-capitalize ps-3">Projects table</h6>
-              </div>
-            </div>
-            <div class="card-body px-0 pb-2">
-              <div class="table-responsive p-0">
-              <?php
-$query="SELECT * FROM `form1`";
-$data=mysqli_query($con,$query);
-$total= mysqli_num_rows($data);
-
-echo $total;
-
-
-
-if($total !=0){
-    ?>
-<h2 align="center"><mark>Product details</mark></h2>
-<center><table border="0" cellspacing="7" width="100%" class="table" id="table-container">
-    <tr>
-    <th width="15%">ID</th>
-    <th width="15%">Product Name</th>
-    <th width="10%">code</th>
-    <th width="15%">Image</th>
-    <th width="5%">Price</th>
-
-    <th width="30%">Operations</th>
-
-
-</t r>
-
-
-<?php
-  while($result=mysqli_fetch_assoc($data))
-  {
-    echo "<tr>
-    <td>".$result['id']."</td>
-
-    <td>".$result['product']."</td>
-    <td>".$result['code']."</td>
-    <td>". "<img src=".$result['image']. ' alt="not found" width=100px height="100px">' ."</td>
-    <td>".$result['price']."</td>
-
-
-    <td>
-    <a  href='delete2.php?id=$result[id]'><input type='submit' value='Delete' class='delete btn btn-outline-primary btn-sm mb-0' onclick='return checkdelete()'>
-    </a>
-    <td><a  href='view2.php?id=$result[id]'><input type='submit' value='View' class='update btn btn-outline-primary btn-sm mb-0'></a>
-    </td>
-
-
-</tr>";
-
-  }
-}
-else{
-    echo "no records found";
-}
-?>
-
-</table></center></div>
             </div>
           </div>
         </div>
