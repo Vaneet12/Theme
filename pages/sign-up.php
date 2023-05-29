@@ -175,7 +175,7 @@ if(isset($_POST['submit'])){
 //if($fname !="" && $lname !="" && $password !="" && $conf !="" && $gender !="" && $email !="" && $phone !="" && $caste !="" && lang1 !="" && $address !=""){
 else{
   if($password == $cpassword){
-  $query ="INSERT INTO `form`(name,email,password,cpassword,phone,address) VALUES ('$name','$email','$password1','$password2','$phone','$address')";
+  $query ="INSERT INTO `user`(name,email,password,cpassword,phone,address) VALUES ('$name','$email','$password1','$password2','$phone','$address')";
   $data=mysqli_query($con,$query);
   if($data){
     echo "<script>alert('You have been registered')</script>";
