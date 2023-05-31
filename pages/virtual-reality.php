@@ -1,6 +1,5 @@
 <?php
 session_start();
-echo "Welcome " . $_SESSION['username'];
 include("connection4.php");
 $userprofile=$_SESSION['username'];
 if($userprofile==true){
